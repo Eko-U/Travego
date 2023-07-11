@@ -125,6 +125,12 @@ body {
   font-family: 'Rubik', sans-serif;
   text-align: center;
   cursor: pointer; }
+  @media only screen and (max-width: 75em) {
+    .btn, .btn:link, .btn:visited {
+      font-size: 1.778rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .btn, .btn:link, .btn:visited {
+      font-size: 2rem; } }
 
 .btn--fill {
   background-color: #0060df;
@@ -211,16 +217,34 @@ body {
     font-weight: 500;
     margin-bottom: .3rem;
     color: #444444; }
+    @media only screen and (max-width: 75em) {
+      .destination-card__title {
+        font-size: 2.44rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .destination-card__title {
+        font-size: 2.75rem; } }
   .destination-card__location {
     font-size: 1.8rem;
     color: #777777; }
+    @media only screen and (max-width: 75em) {
+      .destination-card__location {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .destination-card__location {
+        font-size: 2.25rem; } }
   .destination-card__price-amount {
     font-size: 3rem;
     font-weight: 700;
     color: #444444; }
   .destination-card__price-unit {
     color: #777777;
-    font-size: 1rem; }
+    font-size: 1.4rem; }
+    @media only screen and (max-width: 75em) {
+      .destination-card__price-unit {
+        font-size: 1,5556rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .destination-card__price-unit {
+        font-size: 1.75rem; } }
   .destination-card .dollar {
     color: #0060df; }
 
@@ -552,16 +576,16 @@ body {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); }
-  @media only screen and (max-width: 71.875em) {
+  @media only screen and (max-width: 47.5em) {
     .ratings {
-      max-width: 55rem; } }
-  @media only screen and (max-width: 29.5em) {
-    .ratings {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      min-width: 45rem;
+      margin: 0 auto; } }
   .ratings .rating--number {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #0060df; }
+    color: #0060df;
+    justify-content: center; }
   .ratings .rating--text {
     text-align: center; }
   .ratings-box {
@@ -572,9 +596,9 @@ body {
     gap: 1rem;
     place-items: center;
     transition: all .2s; }
-    @media only screen and (max-width: 29.5em) {
+    @media only screen and (max-width: 59.375em) {
       .ratings-box {
-        grid-template-columns: min-content auto; } }
+        grid-template-columns: repeat(2, auto); } }
     @media only screen and (max-width: 20.625em) {
       .ratings-box {
         grid-template-columns: auto; } }
@@ -596,9 +620,7 @@ body {
   margin-top: -1rem; }
 
 .section-us__text {
-  grid-column: 2/-1;
-  font-size: 1.6rem;
-  line-height: 1.7; }
+  grid-column: 2/-1; }
 
 .section-us__heading {
   font-weight: 400;
