@@ -40,9 +40,9 @@ body {
   .heading--1 {
     font-size: 4.5rem;
     font-weight: 700; }
-    @media only screen and (max-width: 31.25em) {
+    @media only screen and (max-width: 65.625em) {
       .heading--1 {
-        font-size: 3.75rem; } }
+        font-size: 5rem; } }
   .heading--2 {
     font-size: 3.5rem;
     font-weight: 700; }
@@ -52,6 +52,12 @@ body {
   .heading--4 {
     font-size: 1.8rem;
     font-weight: 400; }
+    @media only screen and (max-width: 75em) {
+      .heading--4 {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .heading--4 {
+        font-size: 2.25rem; } }
 
 .body-copy {
   line-height: 1.7; }
@@ -241,7 +247,7 @@ body {
     font-size: 1.4rem; }
     @media only screen and (max-width: 75em) {
       .destination-card__price-unit {
-        font-size: 1,5556rem; } }
+        font-size: 1.5556rem; } }
     @media only screen and (max-width: 56.25em) {
       .destination-card__price-unit {
         font-size: 1.75rem; } }
@@ -440,19 +446,21 @@ body {
     display: flex;
     gap: 3rem;
     flex-flow: row wrap; }
-    .footer-copyright .terms {
-      margin-left: auto; }
-      @media only screen and (max-width: 33.125em) {
-        .footer-copyright .terms {
-          margin: 0; } }
     @media only screen and (max-width: 33.125em) {
       .footer-copyright {
-        flex-flow: column; } }
+        flex-flow: column;
+        gap: 1.5rem; } }
   .footer__text {
     font-size: 1.7rem; }
 
 .address {
   font-style: normal; }
+
+.copyright {
+  margin-left: auto; }
+  @media only screen and (max-width: 33.125em) {
+    .copyright {
+      margin: 0; } }
 
 .heros {
   background-color: rgba(47, 112, 204, 0.137); }
@@ -474,8 +482,7 @@ body {
       justify-items: center;
       padding: 5rem 3rem; } }
   .hero-text__box {
-    display: grid;
-    gap: 1rem; }
+    display: grid; }
     @media only screen and (max-width: 65.625em) {
       .hero-text__box {
         text-align: center; } }
@@ -608,13 +615,14 @@ body {
 .section-us__details {
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 5rem 4rem; }
 
 .section-us__box {
   display: grid;
   gap: .65rem 3rem;
-  grid-template-columns: auto 1fr; }
+  grid-template-columns: auto 1fr;
+  grid-template-rows: min-content; }
 
 .section-us__icon {
   margin-top: -1rem; }
