@@ -427,11 +427,13 @@ body {
     margin-bottom: 8rem; }
     @media only screen and (max-width: 48.75em) {
       .footer-navs {
-        grid-template-columns: 1fr 1fr 1fr; } }
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 6rem; } }
     @media only screen and (max-width: 30em) {
       .footer-navs {
         grid-template-columns: 1fr;
-        justify-content: center; } }
+        justify-content: center;
+        margin-bottom: 5rem; } }
   @media only screen and (max-width: 48.75em) {
     .footer-address {
       grid-column: 1 / -1; } }
@@ -455,13 +457,19 @@ body {
         gap: 1.5rem; } }
   .footer__text {
     font-size: 1.7rem; }
+    @media only screen and (max-width: 75em) {
+      .footer__text {
+        font-size: 1.8888888rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .footer__text {
+        font-size: 2.125rem; } }
 
 .address {
   font-style: normal; }
 
 .copyright {
   margin-left: auto; }
-  @media only screen and (max-width: 33.125em) {
+  @media only screen and (max-width: 42.5625em) {
     .copyright {
       margin: 0; } }
 
