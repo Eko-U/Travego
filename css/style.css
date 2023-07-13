@@ -46,6 +46,9 @@ body {
   .heading--2 {
     font-size: 3.5rem;
     font-weight: 700; }
+    @media only screen and (max-width: 26.875em) {
+      .heading--2 {
+        font-size: 3.125rem; } }
   .heading--3 {
     font-size: 3rem;
     font-weight: 500; }
@@ -586,7 +589,7 @@ body {
   @media only screen and (max-width: 47.5em) {
     .ratings {
       grid-template-columns: 1fr;
-      min-width: 45rem;
+      max-width: 45rem;
       margin: 0 auto; } }
   .ratings .rating--number {
     font-size: 3.5rem;
@@ -606,7 +609,7 @@ body {
     @media only screen and (max-width: 59.375em) {
       .ratings-box {
         grid-template-columns: repeat(2, auto); } }
-    @media only screen and (max-width: 20.625em) {
+    @media only screen and (max-width: 33.125em) {
       .ratings-box {
         grid-template-columns: auto; } }
     .ratings-box:hover {
