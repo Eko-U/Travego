@@ -427,7 +427,7 @@ body {
   background-color: rgba(47, 112, 204, 0.137); }
   @media only screen and (max-width: 37.5em) {
     .footer {
-      padding: 2rem; } }
+      padding: 2.3rem; } }
   .footer__logo {
     font-size: 4rem !important; }
   @media only screen and (max-width: 30em) {
@@ -569,10 +569,7 @@ body {
   padding: 8rem 7rem; }
   @media only screen and (max-width: 37.5em) {
     .section {
-      padding: 6rem 5rem; } }
-  @media only screen and (max-width: 25em) {
-    .section {
-      padding: 5rem 2.5rem; } }
+      padding: 6rem 2.3rem; } }
 
 .section-experience {
   display: grid;
