@@ -540,7 +540,8 @@ body {
       .hero__texts {
         display: inline; } }
   .hero-img {
-    height: 40rem; }
+    height: 45rem;
+    transform: rotate(-2deg); }
     @media only screen and (max-width: 74.375em) {
       .hero-img {
         height: 35rem; } }
