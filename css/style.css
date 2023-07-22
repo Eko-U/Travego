@@ -29,12 +29,12 @@ body {
   font-weight: 400; }
 
 body {
-  font-family: 'inter', sans-serif;
-  font-family: 'Rubik', sans-serif; }
+  font-family: 'Rubik', sans-serif;
+  font-family: 'inter', sans-serif; }
 
 .heading {
-  font-family: 'inter', sans-serif;
   font-family: 'Rubik', sans-serif;
+  font-family: 'inter', sans-serif;
   color: #313131; }
   .heading--1 {
     font-size: 4.5rem;
@@ -65,15 +65,21 @@ body {
   font-weight: 300;
   color: #444; }
   .body-copy--small {
-    font-size: 1.8rem; }
+    font-size: 16rem; }
     @media only screen and (max-width: 75em) {
       .body-copy--small {
-        font-size: 2rem; } }
+        font-size: 1.777777777777778rem; } }
     @media only screen and (max-width: 56.25em) {
       .body-copy--small {
-        font-size: 2.25rem; } }
+        font-size: 2rem; } }
   .body-copy--big {
-    font-size: 2rem; }
+    font-size: 1.8rem; }
+    @media only screen and (max-width: 75em) {
+      .body-copy--big {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .body-copy--big {
+        font-size: 2.25rem; } }
   .body-copy--large {
     font-size: 2.2rem; }
 
@@ -341,19 +347,13 @@ body {
   font-size: 3.5rem; }
 
 .reviews {
-  margin: 0 auto;
   grid-column: 2 / 3;
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 65rem; }
+  position: relative; }
 
 .review {
-  position: absolute;
-  top: 0;
   display: grid;
   gap: 4rem;
   padding: 2rem;
@@ -361,7 +361,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 3px 1px 1px rgba(0, 0, 0, 0.04);
   transform: scale(0.98);
-  transition: all .2s; }
+  transition: all 0.2s; }
   .review:hover {
     transform: scale(1);
     cursor: pointer; }
@@ -401,7 +401,7 @@ body {
     height: 5.5rem;
     width: 5.5rem;
     background-color: transparent;
-    padding: .5rem;
+    padding: 0.5rem;
     display: grid;
     place-items: center;
     grid-row: 1 / 2;
@@ -416,7 +416,7 @@ body {
 .user-heading {
   font-weight: 500;
   font-size: 1.8rem;
-  margin-bottom: .7rem; }
+  margin-bottom: 0.7rem; }
 
 .user-occupation {
   font-style: italic; }
@@ -713,6 +713,7 @@ body {
     font-style: normal;
     transition: all 0.5s; }
   .blog__img {
+    object-fit: cover;
     height: 30rem;
     width: 100%;
     grid-row: 1 / 2;
