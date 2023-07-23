@@ -48,10 +48,10 @@ body {
         font-size: 3.125rem; } }
   .heading--3 {
     font-size: 3rem;
-    font-weight: 500; }
+    font-weight: 600; }
   .heading--4 {
     font-size: 1.8rem;
-    font-weight: 500; }
+    font-weight: 600; }
     @media only screen and (max-width: 75em) {
       .heading--4 {
         font-size: 2rem; } }
@@ -400,7 +400,7 @@ body {
     .footer__logos {
       grid-column: 1 / -1; } }
   .footer-heading {
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 2.5rem;
     font-size: 1.85rem;
     color: #313131; }
@@ -411,6 +411,9 @@ body {
       .footer-heading {
         font-size: 2.3125rem;
         margin-bottom: 1.9rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer-heading > :not(:last-child) {
+        margin-bottom: 1.7rem; } }
   .footer-navs {
     display: grid;
     gap: 3rem;
@@ -420,6 +423,9 @@ body {
       .footer-navs {
         grid-template-columns: 1fr 1fr 1fr;
         margin-bottom: 6rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer-navs {
+        gap: 2.5rem; } }
     @media only screen and (max-width: 30em) {
       .footer-navs {
         grid-template-columns: 1fr 1fr;
@@ -427,7 +433,8 @@ body {
         margin-bottom: 4rem; } }
     @media only screen and (max-width: 22.5em) {
       .footer-navs {
-        grid-template-columns: 1fr; } }
+        grid-template-columns: 1fr;
+        margin-bottom: 3rem; } }
   @media only screen and (max-width: 48.75em) {
     .footer-address {
       grid-column: 1 / -1; } }
@@ -435,6 +442,9 @@ body {
     list-style-type: none; }
     .footer__list > :not(:last-child) {
       margin-bottom: 1.8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__list > :not(:last-child) {
+        margin-bottom: 1.4rem; } }
   .footer__link {
     text-decoration: none;
     color: #444;
