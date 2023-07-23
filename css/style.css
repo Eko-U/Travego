@@ -376,6 +376,9 @@ body {
       .review__user-details {
         flex-direction: column; } }
 
+.user :not(:last-child) {
+  margin-bottom: 0.7rem; }
+
 .user-heading {
   font-weight: 500;
   font-size: 1.8rem;
