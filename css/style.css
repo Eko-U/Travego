@@ -134,6 +134,17 @@ body {
 .hidden {
   display: none !important; }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(89, 89, 89, 0.709);
+  filter: blur(2rem);
+  -webkit-filter: blur(2rem);
+  z-index: 1; }
+
 .btn, .btn:link, .btn:visited {
   border: none;
   background-color: transparent;
@@ -548,27 +559,28 @@ body {
     align-self: center; }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 10;
   min-width: 30vw;
-  padding: 2rem;
+  padding: 2.5rem;
   height: 100vh;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  gap: 2.5rem; }
   .sidebar-container {
     display: flex;
     flex-direction: column;
     gap: 6rem; }
   @media only screen and (max-width: 37.5em) {
     .sidebar {
-      min-width: 50vw; } }
+      min-width: 60vw; } }
   .sidebar-copyright {
     font-style: italic;
-    color: #7b7b7b; }
+    color: #7b7b7b;
+    margin-top: auto; }
   .sidebar-close {
     font-size: 2.3rem;
     display: flex;
@@ -592,15 +604,6 @@ body {
     transition: all 0.2s; }
     .sidebar__link:hover {
       color: #0060df; }
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: red;
-  z-index: 1; }
 
 .section {
   padding: 8rem 7rem; }
