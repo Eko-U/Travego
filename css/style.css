@@ -23,7 +23,7 @@ html {
       font-size: 50%; } }
 
 body {
-  overflow-x: hidden; }
+  position: relative; }
 
 .font {
   font-weight: 400; }
@@ -130,6 +130,9 @@ body {
 .container {
   max-width: 120rem;
   margin: 0 auto; }
+
+.hidden {
+  display: none !important; }
 
 .btn, .btn:link, .btn:visited {
   border: none;
@@ -396,12 +399,15 @@ body {
       padding: 2.3rem; } }
   .footer__logo {
     font-size: 4rem !important; }
+  @media only screen and (max-width: 48.75em) {
+    .footer__logos {
+      grid-column: 1 / -1; } }
   @media only screen and (max-width: 30em) {
     .footer__logos {
       grid-column: 1 / -1; } }
   .footer-heading {
     font-weight: 600;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.2rem;
     font-size: 1.85rem;
     color: #313131; }
     @media only screen and (max-width: 75em) {
@@ -416,8 +422,8 @@ body {
         margin-bottom: 1.7rem; } }
   .footer-navs {
     display: grid;
-    gap: 3rem;
-    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.7fr;
     margin-bottom: 8rem; }
     @media only screen and (max-width: 48.75em) {
       .footer-navs {
@@ -540,6 +546,61 @@ body {
     grid-column: 2 / -1;
     grid-row: 1 / 3;
     align-self: center; }
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  min-width: 30vw;
+  padding: 2rem;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .sidebar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .sidebar {
+      min-width: 50vw; } }
+  .sidebar-copyright {
+    font-style: italic;
+    color: #7b7b7b; }
+  .sidebar-close {
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: end;
+    cursor: pointer; }
+  .sidebar-heading {
+    font-size: 3rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1.5rem; }
+  .sidebar__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none; }
+  .sidebar__link {
+    font-size: 2.55556rem;
+    color: #444;
+    text-decoration: none;
+    cursor: cell;
+    transition: all 0.2s; }
+    .sidebar__link:hover {
+      color: #0060df; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+  z-index: 1; }
 
 .section {
   padding: 8rem 7rem; }
