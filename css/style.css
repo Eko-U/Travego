@@ -42,7 +42,8 @@ body {
         font-size: 5rem; } }
   .heading--2 {
     font-size: 3.5rem;
-    font-weight: 700; }
+    font-weight: 700;
+    text-transform: capitalize; }
     @media only screen and (max-width: 26.875em) {
       .heading--2 {
         font-size: 3.125rem; } }
@@ -140,9 +141,7 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(89, 89, 89, 0.709);
-  filter: blur(2rem);
-  -webkit-filter: blur(2rem);
+  background-color: rgba(89, 89, 89, 0.407);
   z-index: 1; }
 
 .btn, .btn:link, .btn:visited {
@@ -570,6 +569,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2.5rem; }
+  .sidebar__logo {
+    margin-bottom: 1.7rem; }
   .sidebar-container {
     display: flex;
     flex-direction: column;
@@ -582,10 +583,18 @@ body {
     color: #7b7b7b;
     margin-top: auto; }
   .sidebar-close {
-    font-size: 2.3rem;
     display: flex;
-    justify-content: end;
-    cursor: pointer; }
+    justify-content: end; }
+  .sidebar-close-icon {
+    font-size: 5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.35s; }
+    .sidebar-close-icon:hover {
+      background-color: #eee;
+      border-radius: 150rem;
+      color: #fff;
+      font-weight: bolder; }
   .sidebar-heading {
     font-size: 3rem;
     font-family: 'Rubik', sans-serif;
