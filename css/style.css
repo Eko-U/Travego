@@ -830,7 +830,7 @@ body {
   gap: 4rem 6rem; }
   @media only screen and (max-width: 37.5em) {
     .section-us__details {
-      row-gap: 3.5rem; } }
+      row-gap: 5rem; } }
 
 .section-us__box {
   display: grid; }
