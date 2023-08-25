@@ -254,10 +254,10 @@ body {
     color: #888; }
     @media only screen and (max-width: 75em) {
       .destination-card__location {
-        font-size: 2rem; } }
+        font-size: 1.67rem; } }
     @media only screen and (max-width: 56.25em) {
       .destination-card__location {
-        font-size: 2.25rem; } }
+        font-size: 1.875rem; } }
   .destination-card__price-amount {
     font-size: 3rem;
     font-weight: 700;
@@ -530,7 +530,8 @@ body {
       grid-column: 1 / -1; } }
   @media only screen and (max-width: 30em) {
     .footer__logo {
-      grid-column: 1 / -1; } }
+      grid-column: 1 / -1;
+      margin-bottom: 4rem; } }
   .footer-heading {
     font-weight: 500;
     margin-bottom: 3rem;
@@ -565,7 +566,7 @@ body {
         margin-bottom: 3rem; } }
     @media only screen and (max-width: 37.5em) {
       .footer-navs {
-        gap: 2.5rem; } }
+        row-gap: 6rem; } }
     @media only screen and (max-width: 30em) {
       .footer-navs {
         grid-template-columns: 1fr 1fr;
@@ -843,6 +844,9 @@ body {
   border-radius: 150rem; }
   .section-us__icon > * {
     font-size: 4rem !important; }
+    @media only screen and (max-width: 56.25em) {
+      .section-us__icon > * {
+        font-size: 5rem !important; } }
 
 .section-us__text {
   grid-column: 2 / -1;
@@ -952,3 +956,10 @@ body {
 
 .icon--visible {
   z-index: 1; }
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; }
