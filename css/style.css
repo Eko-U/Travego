@@ -527,11 +527,12 @@ body {
       margin-bottom: 5rem; } }
   @media only screen and (max-width: 48.75em) {
     .footer__logo {
-      grid-column: 1 / -1; } }
+      grid-column: 1 / -1;
+      margin-bottom: 4rem; } }
   @media only screen and (max-width: 30em) {
     .footer__logo {
       grid-column: 1 / -1;
-      margin-bottom: 4rem; } }
+      margin-bottom: 3rem; } }
   .footer-heading {
     font-weight: 500;
     margin-bottom: 3rem;
@@ -544,6 +545,9 @@ body {
       .footer-heading {
         font-size: 2.3125rem;
         margin-bottom: 4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer-heading > :not(:last-child) {
+        margin-bottom: 3rem; } }
   .footer__text {
     font-size: 1.6rem;
     color: #444; }
@@ -739,7 +743,7 @@ body {
   padding: 8rem 7rem; }
   @media only screen and (max-width: 37.5em) {
     .section {
-      padding: 6rem 2.3rem; } }
+      padding: 9rem 2.3rem; } }
 
 .section-experience {
   display: grid;
