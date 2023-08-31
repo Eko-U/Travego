@@ -137,7 +137,12 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: rgba(89, 89, 89, 0.407);
-  z-index: 1; }
+  z-index: 110; }
+
+.header.sticky {
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.98); }
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;
@@ -299,14 +304,12 @@ body {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #e8f0f7; }
 
-.form__tabs--signup {
+.form__tab--active {
   background-color: #2f74b3;
   color: #fff; }
-
-.form__tabs--login {
-  background-color: #e8f0f7; }
 
 .form--active {
   display: flex !important; }
@@ -390,7 +393,8 @@ body {
 
 .header {
   background-color: #e8f0f7;
-  height: 6.7rem;
+  height: 7rem;
+  width: 100%;
   padding: 1rem 5rem;
   display: flex;
   align-items: center;
@@ -686,7 +690,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 10;
+  z-index: 9999;
   min-width: 30vw;
   padding: 2.5rem;
   height: 100vh;
@@ -960,10 +964,3 @@ body {
 
 .icon--visible {
   z-index: 1; }
-
-.sticky {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999; }

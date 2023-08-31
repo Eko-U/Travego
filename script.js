@@ -42,20 +42,8 @@ btnHero.addEventListener('click', function (e) {
   });
 });
 
-// nav.addEventListener('click', function (e) {
-//   e.preventDefault();
-
-//   if (e.target.classList.contains('nav__link')) {
-//     const id = e.target.getAttribute('href');
-//     const scoord = document.querySelector(id).getBoundingClientRect();
-
-//     window.scrollTo({
-//       left: scoord.left + window.pageXOffset,
-//       top: scoord.top + window.pageYOffset,
-//       behavior: 'smooth',
-//     });
-//   }
-// });
+///////////////////////////////////////////////////
+// Smooth Scroll
 
 nav.addEventListener('click', function (e) {
   e.preventDefault();
@@ -71,6 +59,9 @@ nav.addEventListener('click', function (e) {
     });
   }
 });
+
+///////////////////////////////////////////////////
+// Smooth Scroll to sidebar
 
 const sideBarMenu = document.querySelector('.sidebar-menu');
 
@@ -93,4 +84,82 @@ sideBarMenu.addEventListener('click', function (e) {
     navMenu.classList.add('hidden');
   }
 });
-sideMenu;
+
+/*
+  Prevent default behavior for all links,
+  just like to do 
+*/
+
+[...document.querySelectorAll('a')].forEach((el) =>
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+  })
+);
+
+/////////////////////////////////////////
+// Sticky Navigation
+
+const hero = document.querySelector('.hero');
+const navHeight = header.getBoundingClientRect().height;
+
+const obsFunction = function (entries) {
+  const [entry] = entries;
+
+  console.log(entry);
+
+  if (entry.isIntersecting) header.classList.remove('sticky');
+  else header.classList.add('sticky');
+};
+
+const observer = new IntersectionObserver(obsFunction, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+
+observer.observe(hero);
+
+////////////////////////////////////////
+/// Modal box
+
+const btnSignup = document.querySelector('.btn--register');
+const formContainer = document.querySelector('.form__container');
+const closeForm = document.querySelector('.form-close');
+
+btnSignup.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  console.log('click');
+
+  overlay.classList.remove('hidden');
+  formContainer.classList.remove('hidden');
+});
+
+closeForm.addEventListener('click', function (e) {
+  overlay.classList.add('hidden');
+  formContainer.classList.add('hidden');
+});
+
+/////////////////////////////////////////////
+// Tabbed Component
+
+const tabContainer = document.querySelector('.form__tabs');
+
+tabContainer.addEventListener('click', function (e) {
+  if (!e.target.classList.contains('form__tab')) return;
+  console.log(e.target);
+
+  console.log(document.querySelectorAll('.form__tab'));
+  document
+    .querySelectorAll('.form__tab')
+    .forEach((t) => t.classList.remove('form__tab--active'));
+  e.target.classList.add('form__tab--active');
+
+  document
+    .querySelectorAll('.form')
+    .forEach((f) => f.classList.remove('form--active'));
+
+  document
+    .querySelector(`.form--${e.target.dataset.id}`)
+    .classList.add('form--active');
+});
