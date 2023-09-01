@@ -163,3 +163,16 @@ tabContainer.addEventListener('click', function (e) {
     .querySelector(`.form--${e.target.dataset.id}`)
     .classList.add('form--active');
 });
+
+/////////////////////////////////////
+// Cookies
+
+const html = `<div class="cookie"><span class="body-copy body-copy--small cookie--message">We can't help you book the perfect Trip without informations.</span><button class="btn cookie--btn">Got it !</button></div>`;
+
+document.body.insertAdjacentHTML('afterend', html);
+const cookie = document.querySelector('.cookie');
+document.querySelector('.cookie--btn ').addEventListener('click', function (e) {
+  e.preventDefault();
+  // cookie.parentElement.removeChild(cookie);
+  cookie.remove();
+});

@@ -474,6 +474,38 @@ body {
 .nav__icon {
   font-size: 4rem; }
 
+.cookie {
+  font-family: 'inter', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #4683bc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  .cookie--message {
+    color: #fff;
+    transition: all 0.2s; }
+  .cookie--btn {
+    padding: 1rem 2.5rem;
+    background-color: #fff;
+    color: #495057;
+    border-radius: 140rem;
+    transition: all 0.2s; }
+    @media only screen and (max-width: 39.8125em) {
+      .cookie--btn {
+        font-size: 1.6rem; } }
+    .cookie--btn:hover {
+      color: #fff;
+      background-color: #2f74b3; }
+  @media only screen and (max-width: 39.8125em) {
+    .cookie {
+      font-size: 1.6rem; } }
+
 .reviews {
   display: grid;
   gap: 4rem 8rem;
