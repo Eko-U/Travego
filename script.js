@@ -109,8 +109,6 @@ const obsFunction = function (entries, observer) {
 
   if (entry.isIntersecting) header.classList.remove('sticky');
   else header.classList.add('sticky');
-
-  observer.unobserve(hero);
 };
 
 const observer = new IntersectionObserver(obsFunction, {
