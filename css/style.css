@@ -450,9 +450,9 @@ body {
   color: #495057; }
 
 .nav__btn {
-  align-self: stretch;
+  align-self: center;
   border: 2px solid #2f74b3;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   transition: all 0.2s;
   display: grid;
   place-items: center; }

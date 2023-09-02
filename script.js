@@ -52,11 +52,13 @@ nav.addEventListener('click', function (e) {
     const id = e.target.getAttribute('href');
     const scoord = document.querySelector(id).getBoundingClientRect();
 
-    window.scrollTo({
-      left: scoord.left + window.pageXOffset,
-      top: scoord.top + window.pageYOffset,
-      behavior: 'smooth',
-    });
+    // window.scrollTo({
+    //   left: scoord.left + window.pageXOffset,
+    //   top: scoord.top + window.pageYOffset,
+    //   behavior: 'smooth',
+    // });
+
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
 
@@ -102,13 +104,13 @@ sideBarMenu.addEventListener('click', function (e) {
 const hero = document.querySelector('.hero');
 const navHeight = header.getBoundingClientRect().height;
 
-const obsFunction = function (entries) {
+const obsFunction = function (entries, observer) {
   const [entry] = entries;
-
-  console.log(entry);
 
   if (entry.isIntersecting) header.classList.remove('sticky');
   else header.classList.add('sticky');
+
+  observer.unobserve(hero);
 };
 
 const observer = new IntersectionObserver(obsFunction, {
@@ -175,4 +177,10 @@ document.querySelector('.cookie--btn ').addEventListener('click', function (e) {
   e.preventDefault();
   // cookie.parentElement.removeChild(cookie);
   cookie.remove();
+});
+
+overlay.addEventListener('click', function () {
+  overlay.classList.add('hidden');
+  formContainer.classList.add('hidden');
+  navMenu.classList.add('hidden');
 });
